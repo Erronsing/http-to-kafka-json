@@ -22,6 +22,5 @@
 (defn record-event [timestamp username label]
   (let [kafka-producer (KafkaProducer. {"bootstrap.servers" "localhost:9092"}
                                        (StringSerializer.)
-                                       (StringSerializer.))
-        _ (println "yoo " kafka-producer)]
+                                       (StringSerializer.))]
     (send-request-to-kafka! kafka-producer "test" timestamp username label)))
