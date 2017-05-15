@@ -12,8 +12,8 @@
                            :description "Sample Services"}}}}
   (POST "/analytics" []
     :return nil
-    :body-params [timestamp :- Long user :- String label :- String]
-    (ok (util/record-event timestamp user label)))
+    :body-params [timestamp :- Long username :- String label :- String]
+    (ok (util/record-event timestamp username label)))
 
   (GET "/analytics" []
     :return String
