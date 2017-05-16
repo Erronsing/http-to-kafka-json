@@ -17,7 +17,7 @@ To start a web server for the application, run:
     
 To send an event, in terminal type:
     
-    curl -H "Content-Type: application/json" -X POST -d '{"username":"what", "timestamp":1494932595492, "label":"click"}' localhost:3000/analytics_
+    curl -H "Content-Type: application/json" -X POST -d '{"username":"what", "timestamp":1494932595492, "label":"click"}' localhost:3000/analytics
 ## License
 
 Copyright © 2017 Garth Bjerk
