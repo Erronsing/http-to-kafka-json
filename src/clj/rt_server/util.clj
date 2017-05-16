@@ -16,8 +16,9 @@
     (json/generate-string {:timestamp nice-timestamp :user username :label label})))
 
 (defn send-request-to-kafka! [kafka-producer kafka-topic timestamp username label]
-  (.send kafka-producer
-         (ProducerRecord. kafka-topic (request-to-json timestamp username label))))
+  (let [future (.send kafka-producer
+               (ProducerRecord. kafka-topic (request-to-json timestamp username label)))]
+    (.offset (.get future))))
 
 (defn record-event [timestamp username label]
   (let [kafka-producer (KafkaProducer. {"bootstrap.servers" "localhost:9092"}

@@ -15,7 +15,7 @@
                  [metosin/muuntaja "0.2.1"]
                  [metosin/ring-http-response "0.8.2"]
                  [mount "0.1.11"]
-                 [org.apache.kafka/kafka-clients "0.10.0.1"]
+                 [org.apache.kafka/kafka-clients "0.10.2.0"]
                  [org.clojure/clojure "1.8.0"]
                  [org.clojure/tools.cli "0.3.5"]
                  [org.clojure/tools.logging "0.3.1"]
