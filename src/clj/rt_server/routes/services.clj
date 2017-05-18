@@ -18,6 +18,6 @@
   (GET "/analytics" []
     :return String
     :query-params [timestamp :- Long]
-    (ok (util/pretty-print timestamp)))
+    (ok (util/get-aggregations timestamp)))
 
   )

@@ -1,0 +1,14 @@
+{
+  "queryType": "timeseries",
+  "dataSource": "pageviews-kafka",
+  "intervals": [
+    "2017-05-01/2017-06-01"
+  ],
+  "granularity": "hour",
+  "aggregations": [
+    {
+      "type": "count",
+      "name": "views"
+    }
+  ]
+}
